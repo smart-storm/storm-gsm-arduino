@@ -30,6 +30,8 @@ void loop()
       Serial.println("ERROR - GPRS PACKET NOT SENT");
       triedToSend++;
     }
+    else
+        triedToSend=0;
     while(triedToSend == MAX_SEND_TRIES)
     {
       Serial.println("ERROR - REQUESTS LIMIT EXCEEDED");
